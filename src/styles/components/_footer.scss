@@ -1,0 +1,21 @@
+.footer{
+    padding: 30px 36px;
+
+    .footer-bottom{
+        display: flex;
+        align-items: center;
+
+        h4{
+            line-height: 22px;
+            margin: 0;
+            margin-right: 20px;
+        }
+
+        h6{
+            line-height: 17px;
+            margin: 0;
+            color: rgba(41, 50, 65, 0.8);
+            font-weight: 500;
+        }
+    }
+}

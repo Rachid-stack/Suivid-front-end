@@ -1,0 +1,204 @@
+.header{
+    background-color: #ffffff;
+    box-shadow: 0 10px 40px 0 rgba(41, 50, 65, 0.06);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: $header-height;
+    transition: width ease .2s;
+
+    .header-wrapper{
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .menu{
+            height: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            left: 0;
+
+            .logo{
+                height: $header-height;
+                display: flex;
+                align-items: center;
+                padding: 0 22px;
+                padding-right: 20px;
+
+                img{
+                    width: 135px;
+                    border: none;
+                }
+            }
+
+            .menu-container{
+                overflow: auto;
+                height: calc(100% - 70px);
+                background: $color-4;
+                box-shadow: 0px 10px 40px rgba(41, 50, 65, 0.07);
+
+
+
+                .menu-layout{
+                    .p-panelmenu{
+                        .p-panelmenu-panel{
+                            padding: 10px 0;
+
+                            /* sous-menu */
+                            .p-panelmenu-content{
+
+                                .p-menuitem{
+                                    margin-left: 10px;
+
+                                    .p-menuitem-link{
+                                        font-size: $sous-menu-font-size;
+                                        color: $color-2;
+                                        padding: 10px 18px;
+
+                                        &:hover{
+                                            background-color: $color-tr-1;
+                                            color: $color-2;
+                                        }
+
+                                        .pi-fw{
+                                            font-size: 14px;
+                                        }
+
+                                        .p-menuitem-text{
+                                            margin-left: 14px;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        /* Placement de la fleche du menu à droite 
+                            @source: https://forum.primefaces.org/viewtopic.php?t=56329
+                        */
+                        .p-panelmenu-icon {
+                            order: 3; //here we are moving it to last position
+                            margin-left: auto;
+                        }
+
+                        .p-panelmenu-header-link{
+                            font-size: $menu-font-size;
+                            padding: 6px 15px;
+
+                            .pi-fw{
+                                font-size: 22px;
+                            }
+
+                            .p-menuitem-text{
+                                margin: 0px 8px;
+                                margin-left: 10px;
+                                font-weight: 500;
+                            }
+
+                            &:hover{
+                                color: $color-1;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .header-left{
+            height: 100%;
+            padding: 0px 16px;
+            display: flex;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .header-right{
+            height: 100%;
+            flex-grow: 1;
+            padding: 0px 16px 0px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .header-actions{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-grow: 1;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+
+                .connected{
+                    margin-right: .5rem;
+                }
+
+                .p-button{
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header{
+        .header-wrapper{
+            .menu{
+
+                .menu-container{
+                    .menu-layout{
+                        max-width: 230px;
+
+                        .p-panelmenu{
+                            .p-panelmenu-panel{
+                                min-width: 230px;
+
+                                .p-panelmenu-header{
+
+                                    .p-panelmenu-header-link{
+                                        color: $color-2;
+
+                                        &:hover{
+                                            color: $color-1;
+                                        }
+                                    }
+
+                                    &.p-highlight{
+                                        .p-panelmenu-header-link{
+                                            color: $color-1;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+
+                            /* sous-menu */
+                            .p-panelmenu-content{
+
+                                .p-menuitem{
+                                    margin-left: 10px;
+                                    margin-right: 12px;
+
+                                    .p-menuitem-link{
+                                        padding-left: 20px;
+                                    }
+                                }
+                                
+                            }
+                        }
+
+                        
+                    }
+
+                       
+                }
+            }
+        }
+    }
+}

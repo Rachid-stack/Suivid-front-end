@@ -1,0 +1,411 @@
+html{
+    height: 100%;
+    font-size: $font-size;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: $font-size;
+    color: $color-2;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: $color-tr-2;
+}
+
+a, button {
+    text-decoration: none;
+}
+
+h5{
+    font-size: 1.25rem;
+}
+
+.card{
+    background-color: $color-4;
+    padding: 20px;
+    box-shadow: 0px 10px 40px rgba(41,50,65, .06);
+    border-radius: 5px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.p-inputtext {
+    font-size: 1rem;
+    color: #69707A;
+    background: #ffffff;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #D4D6D9;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    border-radius: 6px;
+
+    &.p-invalid{
+        border-color: #f44336;
+    }
+}
+
+.p-button{
+    border-radius: 6px;
+    
+    &.p-button-link{
+        color: $color-1;
+        border: none;
+        background: none;
+    }
+
+    &.p-button-rounded{
+        border-radius: 50%;
+        height: 30px;
+    }
+
+    &.p-button-icon-only{
+        width: 30px;
+        padding: 0.5rem 0;
+        justify-content: center;
+    }
+
+    &.p-button-outlined{
+        background-color: transparent;
+        color: $color-1;
+        border: 1px solid;
+        transition: all ease-in-out .2s;
+
+        &:hover{
+            background-color: $color-1;
+            color: $color-4;
+        }
+    }
+
+    &.p-button-primary{
+        background: $color-1;
+        color: $color-4;
+        border: solid 1px $color-1;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        /*border-radius: 6px;*/
+
+        &:hover{
+            background: $color-f-1;
+            color: #FFFFFF;
+            border-color: $color-f-1;
+        }
+
+        &.p-disabled{
+            background: $color-tr-1;
+            border: $color-tr-1;
+            color: $color-2;
+        }
+
+    }
+
+    &.p-button-secondary{
+        background: $color-2;
+        color: $color-4;
+        border: solid 1px $color-2;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        /*border-radius: 6px;*/
+
+        &:hover{
+            background: $color-f-2;
+            color: #FFFFFF;
+            border-color: $color-f-2;
+        }
+    }
+
+    &.p-button-loading-left{
+       .p-button-label {
+            margin-left: 0.5rem;
+        } 
+    } 
+}
+
+.p-datatable{
+    margin:  1rem 0;
+
+    .p-datatable-thead{
+        tr{
+            th{
+                text-align: left;
+                color: $color-4;    
+                padding: 1rem;
+                border-style: solid;
+                border-color: rgb(233, 236, 239);
+                border-image: initial;
+                border-width: 0px 0px 1px;
+                background: $color-1;
+                transition: box-shadow 0.2s ease 0s;
+            }
+        }
+    }
+
+    .p-datatable-tbody{
+        tr{
+
+            &:nth-of-type(even){
+                background-color: $color-tr-1;
+            }
+
+            td{
+                padding: .5rem 1rem;
+            }
+        }
+    }
+
+    .bt-actions{
+        text-align: right;
+
+        .bt-action{
+            background: $color-1;
+            border: none;
+            color: white;
+            width: auto;
+            padding: 0.5rem;
+            margin-right: .5rem;
+            transition: all ease-in-out .2s;
+
+            &:hover{
+                background: $color-f-1;
+            }
+        }
+    }
+
+    .p-datatable-loading-overlay{
+        background: $color-tr-2;
+        
+        i {
+            padding: 2rem;
+        }
+    }
+}
+
+.p-paginator{
+    padding: 1rem;
+
+    .p-paginator-first {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+    .p-paginator-first, .p-paginator-prev, .p-paginator-next, .p-paginator-last, .p-paginator-page{
+        background-color: transparent;
+        border: 0 none;
+        color: #83888F;
+        min-width: 2.357rem;
+        height: 2.357rem;
+        margin: 0.143rem;
+        transition: box-shadow 0.2s;
+        border-radius: 6px;
+    }
+
+    .p-paginator-pages{
+        .p-paginator-page{
+            &.p-highlight{
+                background: $color-1;
+                border-color: $color-1;
+                color: #FFFFFF;
+            }
+
+            &:not(.p-highlight){
+                &:hover{
+                    background: $color-tr-1;
+                    border-color: transparent;
+                    color: $color-2;
+                }
+            }
+        }
+        
+    }
+}
+
+.p-dialog-mask{
+    &.p-component-overlay{
+        background-color: rgba(0,0,0, $alpha: .4);
+        transition-duration: 0.2s;
+    }
+}
+
+.p-dialog{
+    border-radius: 6px;
+    box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0, 0.12);
+    border: 0 none;
+
+    .p-dialog-header{
+        /*background: $color-2;*/
+        border-bottom: 0 none;
+        background: #ffffff;
+        color: #69707A;
+        padding: 1.5rem;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+
+        .p-dialog-title{
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .p-dialog-header-icon {
+            width: 2rem;
+            height: 2rem;
+            color: $color-2;
+            border: 0 none;
+            background: transparent;
+            border-radius: 50%;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+            margin-right: 0.5rem;
+
+            &:hover{
+                background-color: $color-tr-1;
+            }
+        }
+
+    }
+
+    .p-dialog-content{
+        background: #ffffff;
+        color: #69707A;
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+    .p-dialog-footer {
+        border-top: 0 none;
+        background: #ffffff;
+        color: #69707A;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+
+        button{
+            margin: 0 0.5rem 0 0;
+            width: auto;
+
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+
+}
+
+.p-input-filled{
+    .p-inputtext{
+        background-color: #FCFCFC;
+    }
+}
+
+.p-error{
+    color: rgb(244, 67, 54);
+    
+    small{
+        font-style: italic;
+    }
+}
+
+.p-toast{
+    position: fixed;
+    width: 25rem;
+    opacity: .9;
+
+    .p-toast-message {
+        margin: 0 0 1rem 0;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+
+        .p-toast-message-content {
+            padding: 1rem;
+            border-width: 0 0 0 6px;
+
+            .p-toast-message-text {
+                margin: 0 0 0 1rem;
+            }
+
+            .p-toast-message-icon {
+                font-size: 2rem;
+            }
+
+            .p-toast-summary {
+                font-weight: 700;
+            }
+
+            .p-toast-detail {
+                margin: 0.5rem 0 0 0;
+            }
+        }
+
+        .p-toast-icon-close {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: transparent;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            &:focus {
+                outline: 0 none;
+                outline-offset: 0;
+                box-shadow: 0 0 0 0.2rem $color-1;
+            }
+        }
+
+        &.p-toast-message-info {
+            background: #B3E5FC;
+            border: solid #0891cf;
+            border-width: 0 0 0 6px;
+            color: #044868;
+
+            .p-toast-icon-close {
+                color: #044868;
+            }
+        }
+
+        &.p-toast-message-success {
+            background: #C8E6C9;
+            border: solid #439446;
+            border-width: 0 0 0 6px;
+            color: #224a23;
+            
+            .p-toast-icon-close {
+                color: #224a23;
+            }
+        }
+
+        &.p-toast-message-warn {
+            background: #FFECB3;
+            border: solid #d9a300;
+            border-width: 0 0 0 6px;
+            color: #6d5100;
+
+            .p-toast-icon-close {
+                color: #6d5100;
+            }
+        }
+
+        &.p-toast-message-error{
+            background: #FFCDD2;
+            border: solid #e60017;
+            border-width: 0 0 0 6px;
+            color: #73000c;
+            
+            .p-toast-icon-close {
+                color: #73000c;
+            }
+        }
+
+
+    }   //.p-toast-message
+}
+
+.p-toast-top-right {
+    top: 20px;
+    right: 20px;
+}
